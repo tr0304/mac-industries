@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Mac Industries Gaming Store in Westville</title>
+    <meta name="description" content="Contact Mac Industries. Find our store on the map in Westville, watch our latest gaming video and get in touch with our support team.">
+    <meta name="keywords" content="contact Mac Industries, gaming store Westville, gaming store contact, customer support, store location">
+    <meta name="author" content="Troy Mac Donald">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Contact Us | Mac Industries Gaming Store in Westville">
+    <meta property="og:description" content="Contact Mac Industries. Find our store on the map in Westville, watch our latest gaming video and get in touch with our support team.">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
+    <script src="../js/map.js" defer></script>
+    <script src="../js/contact.js" defer></script>
+    <script src="../js/animations.js" defer></script>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header>
+    <nav aria-label="Main navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutUs.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="enquiry.html">Enquiry</a></li>
+            <li><a href="contact.html" class="active" aria-current="page">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main id="main">
+
+    <section>
+        <h1>Contact Us</h1>
+        <p>Want to call or email us with any questions? Reach out to our capable and skilled staff who will work around the clock to ensure you are taken care of.</p>
+    </section>
+
+    <section>
+        <h2>Location</h2>
+        <p>Where to find us in store. Drag and zoom the map, or find out how far you are from us.</p>
+
+        <!-- USED RANDOM LOCATION BECAUSE THE BUSINESS IS NOT REAL!!! -->
+        <div class="map-wrap">
+            <div id="map" role="region" aria-label="Interactive map showing the Mac Industries store location in Westville"></div>
+        </div>
+        <noscript><p>Turn on JavaScript to use the interactive map, or open the location in Google Maps below.</p></noscript>
+
+        <div class="map-actions">
+            <button type="button" class="btn" id="locate-btn">How far am I from the store?</button>
+            <button type="button" class="btn btn-outline" id="reset-btn">Reset map</button>
+            <a class="btn btn-outline" href="https://www.google.com/maps/dir/?api=1&amp;destination=-29.8333,30.9167" target="_blank" rel="noopener">Open in Google Maps</a>
+        </div>
+        <p id="map-status" class="map-status" role="status" aria-live="polite"></p>
+    </section>
+
+    <section>
+        <h2>Watch This</h2>
+        <p>YouTube link to our social media</p>
+        <!-- Random video used because the business is not real. -->
+        <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/hqJTNzRkVms"
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+        </iframe>
+    </section>
+
+    <section>
+        <h2>Send us a message</h2>
+        <p>Fill in the form and your email app will open with the message ready to send to us.</p>
+
+        <form id="contact-form" action="#" method="post" novalidate>
+
+            <p class="form-summary" id="contact-summary" role="alert" hidden></p>
+
+            <div class="field">
+                <label for="contact-name">Your name</label>
+                <input type="text" id="contact-name" name="name" autocomplete="name" maxlength="60" required aria-describedby="contact-name-error">
+                <p class="field-error" id="contact-name-error"></p>
+            </div>
+
+            <div class="field">
+                <label for="contact-email">Your email address</label>
+                <input type="email" id="contact-email" name="email" autocomplete="email" required aria-describedby="contact-email-error">
+                <p class="field-error" id="contact-email-error"></p>
+            </div>
+
+            <div class="field">
+                <label for="contact-topic">What is your message about?</label>
+                <select id="contact-topic" name="topic" required aria-describedby="contact-topic-error">
+                    <option value="">Choose a topic...</option>
+                    <option value="General question">General question</option>
+                    <option value="Order or delivery">Order or delivery</option>
+                    <option value="Returns">Returns</option>
+                    <option value="Feedback">Feedback</option>
+                </select>
+                <p class="field-error" id="contact-topic-error"></p>
+            </div>
+
+            <div class="field">
+                <label for="contact-message">Your message</label>
+                <textarea id="contact-message" name="message" rows="6" maxlength="500" required aria-describedby="contact-message-error"></textarea>
+                <span class="message-count" id="contact-count">0 / 500</span>
+                <p class="field-error" id="contact-message-error"></p>
+            </div>
+
+            <button type="submit" class="btn">Send message</button>
+        </form>
+
+        <div class="contact-confirm" id="contact-confirm" role="status" tabindex="-1" hidden>
+            <h3>Thank you, <span id="confirm-name"></span>!</h3>
+            <p>Your email app should have opened with your message ready to send to <strong id="confirm-to"></strong>.</p>
+            <p>Subject: <span id="confirm-subject"></span></p>
+            <p>If nothing opened, use the button below.</p>
+            <div class="confirm-buttons">
+                <a class="btn" id="confirm-link" href="#">Open my email app</a>
+                <button type="button" class="btn btn-outline" id="contact-again">Write another message</button>
+            </div>
+        </div>
+        <noscript><p>Turn on JavaScript to use this form, or email us at macindustriesDigital@gmail.com.</p></noscript>
+    </section>
+
+    <section>
+        <p>Please refer to our <a href="enquiry.html">enquiry page</a> if you have any more questions.</p>
+    </section>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 Mac Industries. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

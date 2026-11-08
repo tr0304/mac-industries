@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Enquiry | Ask Mac Industries About Consoles and Games</title>
+    <meta name="description" content="Send a product or service enquiry to Mac Industries. Ask about console prices, availability and game deals and we will contact you with answers.">
+    <meta name="keywords" content="product enquiry, console prices, game availability, gaming store enquiry, Mac Industries">
+    <meta name="author" content="Troy Mac Donald">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Product Enquiry | Ask Mac Industries About Consoles and Games">
+    <meta property="og:description" content="Send a product or service enquiry to Mac Industries. Ask about console prices, availability and game deals and we will contact you with answers.">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="../js/products.js" defer></script>
+    <script src="../js/enquiry.js" defer></script>
+    <script src="../js/animations.js" defer></script>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header>
+    <nav aria-label="Main navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutUs.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="enquiry.html" class="active" aria-current="page">Enquiry</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main id="main">
+
+    <section>
+        <h1>Product or Service Enquiry</h1>
+        <p>Have any questions but don't have the time to come in store? Fill out your enquiry here and we'll contact you with answers to your problem.</p>
+    </section>
+
+    <section id="enquiry-form-section">
+        <form id="enquiry-form" action="#" method="post" novalidate>
+
+            <p class="form-summary" id="form-summary" role="alert" hidden></p>
+
+            <div class="field">
+                <label for="name">Full name</label>
+                <input type="text" id="name" name="name" autocomplete="name" maxlength="60" required aria-describedby="name-error">
+                <p class="field-error" id="name-error"></p>
+            </div>
+
+            <div class="field">
+                <label for="email">Email address</label>
+                <input type="email" id="email" name="email" autocomplete="email" required aria-describedby="email-error">
+                <p class="field-error" id="email-error"></p>
+            </div>
+
+            <div class="field">
+                <label for="phone">Phone number (optional)</label>
+                <input type="tel" id="phone" name="phone" autocomplete="tel" inputmode="tel" placeholder="e.g. 082 123 4567" aria-describedby="phone-hint phone-error">
+                <p class="field-hint" id="phone-hint">Needed only if you want us to phone you.</p>
+                <p class="field-error" id="phone-error"></p>
+            </div>
+
+            <div class="field">
+                <label for="product">Product you are asking about</label>
+                <select id="product" name="product" required aria-describedby="product-error">
+                    <option value="">Choose a product...</option>
+                </select>
+                <p class="field-error" id="product-error"></p>
+            </div>
+
+            <div class="field">
+                <label for="quantity">Quantity</label>
+                <input type="number" id="quantity" name="quantity" min="1" max="10" step="1" value="1" inputmode="numeric" required aria-describedby="quantity-error">
+                <p class="field-error" id="quantity-error"></p>
+            </div>
+
+            <div class="field">
+                <fieldset aria-describedby="topics-error">
+                    <legend>What would you like to know?</legend>
+                    <label class="choice"><input type="checkbox" name="topics" value="Price"> Price</label>
+                    <label class="choice"><input type="checkbox" name="topics" value="Availability"> Availability</label>
+                    <label class="choice"><input type="checkbox" name="topics" value="Delivery"> Delivery</label>
+                </fieldset>
+                <p class="field-error" id="topics-error"></p>
+            </div>
+
+            <div class="field">
+                <fieldset>
+                    <legend>How should we contact you?</legend>
+                    <label class="choice"><input type="radio" name="contactMethod" value="Email" checked> Email</label>
+                    <label class="choice"><input type="radio" name="contactMethod" value="Phone"> Phone</label>
+                </fieldset>
+            </div>
+
+            <div class="field">
+                <label for="message">Your enquiry</label>
+                <textarea id="message" name="message" rows="6" maxlength="500" required aria-describedby="message-error"></textarea>
+                <span class="message-count" id="message-count">0 / 500</span>
+                <p class="field-error" id="message-error"></p>
+            </div>
+
+            <button type="submit" class="btn" id="submit-btn">Send enquiry</button>
+        </form>
+        <noscript><p>Turn on JavaScript to send an enquiry using this form.</p></noscript>
+    </section>
+
+    <section class="enquiry-response" id="enquiry-response" role="status" tabindex="-1" hidden></section>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 Mac Industries. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consoles, Games and Controllers | Mac Industries</title>
+    <meta name="description" content="Browse PS5 and Xbox Series S consoles, GTA 6, Minecraft and gaming controllers with prices from Mac Industries, and enquire online for better console versions.">
+    <meta name="keywords" content="PS5 price, Xbox Series S, GTA 6, Minecraft, gaming controllers, console games for sale, gaming products">
+    <meta name="author" content="Troy Mac Donald">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Consoles, Games and Controllers | Mac Industries">
+    <meta property="og:description" content="Browse PS5 and Xbox Series S consoles, GTA 6, Minecraft and gaming controllers with prices from Mac Industries, and enquire online for better console versions.">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="../js/products.js" defer></script>
+    <script src="../js/services.js" defer></script>
+    <script src="../js/animations.js" defer></script>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header>
+    <nav aria-label="Main navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutUs.html">About Us</a></li>
+            <li><a href="services.html" class="active" aria-current="page">Services</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="enquiry.html">Enquiry</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main id="main">
+
+    <section>
+        <h1>Our services and products...</h1>
+        <p>Please feel free to explore our website's products and services section to review our full range of gaming offerings.</p>
+    </section>
+
+    <!-- Products: the cards are built by js/services.js from js/products.js -->
+    <section>
+        <h2>Browse our products</h2>
+        <p>Search, filter or sort to find the console, game or accessory you want.</p>
+
+        <div class="product-tools" role="search">
+            <div class="tools-row">
+                <div>
+                    <label for="product-search">Search products</label>
+                    <input type="search" id="product-search" placeholder="Try PS5, Xbox, racing or Minecraft" autocomplete="off">
+                </div>
+                <div>
+                    <label for="product-sort">Sort by</label>
+                    <select id="product-sort">
+                        <option value="featured">Featured</option>
+                        <option value="price-asc">Price: low to high</option>
+                        <option value="price-desc">Price: high to low</option>
+                        <option value="name-asc">Name: A to Z</option>
+                    </select>
+                </div>
+            </div>
+
+            <div>
+                <span class="filter-label" id="filter-label">Category</span>
+                <div class="filter-group" id="category-filters" role="group" aria-labelledby="filter-label"></div>
+            </div>
+        </div>
+
+        <div class="product-status">
+            <p class="product-count" id="product-count" role="status" aria-live="polite"></p>
+            <button type="button" class="btn btn-outline" id="clear-filters" hidden>Clear search and filters</button>
+        </div>
+
+        <div class="card-grid" id="product-grid"></div>
+
+        <noscript>
+            <p>Turn on JavaScript to search and filter our products. Our range: PS5 (R10000), Xbox S series (R11000), Grand Theft Auto 6 (R2000), Minecraft (R1000), EA Sports FC 26 (R1600), God of War Ragnar&ouml;k (R900), Gran Turismo 7 (R2000) and controllers (from R1100). <a href="enquiry.html">Make an enquiry</a>.</p>
+        </noscript>
+    </section>
+
+    <!-- Feature picture -->
+    <section>
+        <figure class="banner">
+            <img src="../_images/gamer-playing-fortnite.jpg"
+                 srcset="../_images/responsive/gamer-playing-fortnite-480w.jpg 480w,
+                         ../_images/responsive/gamer-playing-fortnite-800w.jpg 800w"
+                 sizes="(min-width: 50rem) 50rem, calc(100vw - 2rem)"
+                 alt="Gamer playing Fortnite"
+                 loading="lazy">
+        </figure>
+    </section>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 Mac Industries. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
