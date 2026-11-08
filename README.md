@@ -9,7 +9,7 @@ A website for Mac Industries, a gaming retailer that sells consoles and video ga
 | **Assessment** | Summative 1 Portfolio of Evidence (POE), Part 3 |
 | **Live website** | https://tr0304.github.io/mac-industries/ |
 | **Repository** | `wede5020-g1-2026-summative-1-portfolio-of-evidence-st10511649` |
-| **Copy used for publishing** | https://github.com/tr0304/mac-industries |
+| **Copy used for publishing** | [https://github.com/tr0304/mac-industries](https://github.com/tr0304/mac-industries) |
 
 ## Contents
 
