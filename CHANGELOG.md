@@ -48,5 +48,4 @@ Corrections made in response to the lecturer's Part 2 feedback.
 - Prompt on the Gallery page inviting visitors to click a photo and open the lightbox.
 - Credit for the learning videos used for the lightbox, form validation, map, enquiry response and product filter.
 
-**Removed**
-- The "How far am I from the store?" button on the Contact page map.
+
