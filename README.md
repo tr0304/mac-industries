@@ -94,23 +94,6 @@ Mac Industries
 └── README.md
 ```
 
-## Part 3 requirements and where to find them
-
-| Requirement | Where it is |
-|-------------|-------------|
-| Feedback for Part 2 and changelog | [How I addressed the Part 2 feedback](#how-i-addressed-the-part-2-feedback) and [Changelog](#changelog) below, and [CHANGELOG.md](CHANGELOG.md) |
-| Interactive elements | FAQ accordion on About Us (`js/accordion.js`) and scroll animations on every page (`js/animations.js`) |
-| Interactive map | Contact page (`js/map.js`) |
-| Gallery lightbox | Gallery page (`js/lightbox.js`) |
-| Dynamic content and search | Services page (`js/products.js` and `js/services.js`) |
-| SEO: title tags, meta description, meta keywords | The `<head>` of all six pages |
-| SEO: image file names and alt text | `_images/` and the `alt` text on every image |
-| SEO: robots.txt and sitemap.xml | Project root |
-| Enquiry form controls, validation and response | Enquiry page (`js/enquiry.js`) |
-| Contact form controls, validation and email | Contact page (`js/contact.js`) |
-| GitHub commits, README and changelog | This repository |
-| Website deployed | See the live website link at the top |
-| References | [References](#references) below |
 
 ## How the main features work
 
@@ -130,26 +113,7 @@ Mac Industries
 
 **Responsive design.** The CSS is written for phones first. Media queries at 40em (tablet) and 64em (desktop) change the layout. The navigation is a grid on phones and a single row on larger screens, and cards and gallery pictures wrap into more columns as the screen gets wider. Text sizes use `clamp()` so they scale smoothly (MDN, n.d.g). Images use `srcset` and `sizes` so phones download smaller files (MDN, n.d.h).
 
-## How I addressed the Part 2 feedback
 
-The table below lists each point from my Part 2 feedback and what I did about it.
-
-| Feedback from Part 2 | What I did | Where |
-|----------------------|-----------|-------|
-| The sitemap is missing | Created a sitemap with a page-link table, and added a sitemap section here | `SITEMAP.md`, this README |
-| The changelog is missing and must be dated and specific | Created `CHANGELOG.md` and included the full changelog in this README | `CHANGELOG.md`, [Changelog](#changelog) |
-| References are incomplete and the image credit was a placeholder | Wrote a full reference list with links and an image credits section | [References](#references), [Image credits](#image-credits) |
-| Five pages had the wrong `css/styles.css` path, and the correct link sat inside the navigation | Every page now has one `<link rel="stylesheet" href="../css/styles.css">` inside `<head>` | All six pages in `screens/` |
-| Semantic structure was inconsistent, with `<header>` and `<main>` missing on some pages | Every page now has a skip link, `<header>` with `<nav>`, one `<main>`, and a `<footer>` | All six pages in `screens/` |
-| The About page link used `aboutus.html` but the file is `aboutUs.html`, and the link text was inconsistent | Every link now uses `aboutUs.html`, and the navigation is the same on every page | All six pages in `screens/` |
-| The Services page used inline widths and Flexbox without wrapping | Moved the layout into reusable classes (`.card-grid`, `.card`) that wrap and stack on small screens, and then rebuilt the product list with JavaScript | `css/styles.css`, `screens/services.html` |
-| Responsive changes were not consistent across pages, and the tablet and mobile adjustments were missing for Services and navigation | Added breakpoints for phone, tablet and desktop that apply to every page, and a navigation layout that works at narrow widths | `css/styles.css` |
-| Smaller text and page-specific headings needed responsive refinements | Body text and headings now scale with `clamp()` | `css/styles.css` |
-| Extend interaction styling and keep keyboard focus clearly visible | Added `:hover`, `:focus-visible` and `:active` styles for links, buttons, form fields and the new accordion, chips and lightbox buttons | `css/styles.css` |
-| Images were missing `srcset` and `sizes`, and the logo alt text said "profile image" | Added `srcset`, `sizes` and `loading="lazy"` with 480px and 800px copies of each image, and wrote descriptive alt text | `_images/responsive/`, all pages with images |
-| Commit messages should name the files or features changed | I commit after each change with a specific message, for example "Add gallery lightbox with keyboard and swipe support" | Commit history |
-| The README Author and Licence sections were incomplete, and the directory tree needed correcting | Completed both sections and rewrote the directory tree to match the real files | [Project structure](#project-structure), [Author and licence](#author-and-licence) |
-| The README needed a dated changelog section, including updates for the Part 1 feedback | Added the [Changelog](#changelog) below with dated entries from the first version | [Changelog](#changelog) |
 
 ## Changelog
 
@@ -165,16 +129,13 @@ The full changelog is below. It is also in [CHANGELOG.md](CHANGELOG.md). Dates a
 - Error messages in both forms now keep their space reserved, so the form no longer jumps when a message appears. This fixed a bug where clicking a checkbox straight after typing in the message box sometimes did nothing.
 - `sitemap.xml` and `robots.txt` now use the real published website address.
 
-**Removed**
-- The consent checkbox from the Enquiry form, because it was not needed.
-
 ### [2.0.0] - 2026-11-07 (Part 3 features)
 **Added**
 - SEO: unique title, meta description and meta keywords on all six pages, plus author, robots and Open Graph tags.
 - `robots.txt` and `sitemap.xml`.
 - Gallery lightbox with captions, arrow buttons, keyboard controls and swipe (`js/lightbox.js`).
 - FAQ accordion on the About Us page (`js/accordion.js`) and scroll animations on all pages (`js/animations.js`).
-- Interactive Leaflet map on the Contact page with a marker, popup, distance button and reset button (`js/map.js`).
+- Interactive Leaflet map on the Contact page with a marker, popup and reset button (`js/map.js`).
 - Products built with JavaScript on the Services page, with search, category filter and sort (`js/products.js`, `js/services.js`). Three more games (EA Sports FC 26, God of War Ragnarök, Gran Turismo 7) were added using the prices from the Gallery.
 - Rebuilt Enquiry form with a dropdown, number field, checkboxes, radio buttons, validation, `fetch()` submission and a cost and availability response (`js/enquiry.js`).
 
@@ -207,6 +168,11 @@ The full changelog is below. It is also in [CHANGELOG.md](CHANGELOG.md). Dates a
 ### [1.0.0] - 2026-11-07 (Part 2 files carried over)
 **Added**
 - Initial commit, and the Part 2 files (six pages, `css/styles.css` and the images) transferred into this repository.
+
+### [2.2.0] - 2026-11-09
+**Added**
+- Prompt on the Gallery page inviting visitors to click a photo and open the lightbox.
+- Credit for the learning videos used for the lightbox, form validation, map, enquiry response and product filter.
 
 ## Publishing the website
 
@@ -277,6 +243,19 @@ W3C (n.d.a) *Accordion pattern*, WAI-ARIA Authoring Practices Guide. Available a
 W3C (n.d.b) *Dialog (modal) pattern*, WAI-ARIA Authoring Practices Guide. Available at: https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/ (Accessed: 8 November 2026).
 
 The Independent Institute of Education (2026) *WEDE5020 Web Development (Introduction) module manual* [Word document]. Available at: https://advtechonline.sharepoint.com/:w:/s/TertiaryStudents/cQpnfbbMxlRyS4cfz4xblUxqEgUCLNe9ab-zGeOYpowFzi1Buw (Accessed: 8 November 2026).
+
+Coding in Public (2021) Lightbox Image Gallery (Vanilla Javascript Project) [Video]. Available at: https://www.youtube.com/watch?v=v9nq8KXiPFo (Accessed: 9 November 2026).
+
+Programming Knowledge (2025) How to Validate a Form Using JavaScript [Video]. Available at: https://www.youtube.com/watch?v=zMy8o4kVs-Y (Accessed: 9 November 2026).
+
+MapTiler (2019) Leaflet Tutorial 1: Create a map with a marker using JavaScript [Video]. Available at: https://youtube.com/watch?v=wVnimcQsuwk (Accessed: 9 November 2026).
+
+CodeHandbook (2024) Send POST Request With Fetch API JavaScript [Video]. Available at: https://www.youtube.com/watch?v=4rptTA0epew (Accessed: 9 November 2026).
+
+Traversy Media (2024) | [Video]. Available at: https://youtu.be/Hwyyk1Ueoig (Accessed: 9 November 2026).
+
+
+
 Also used work learnt during lecture time and constanly asked my lecturer for assistance with my project.
 
 ## Image credits
@@ -299,7 +278,10 @@ The map tiles are © OpenStreetMap contributors. The Contact page video is from 
 
 I used two AI assistants while working on this project: Google Gemini and Claude.It helped me plan the work,fix code, and draft documentation such as this README and the changelog. I implemented suggestions and corrections from gemini to my project and tested it myself. i used Gemini to help better my project by using its advise and pointers to better the project i also used it to mark my project via the rubric to see if i have left anything out and what i ciuld improve. 
 
-My Gemini chat: https://share.gemini.google/zpJo8uQ1aUsI
+My Gemini chat: https://share.gemini.google/9VEuSUplhV1v
+
+https://www.traversymedia.com/blog/product-filtering-ui
+
 
 ## Author and licence
 
